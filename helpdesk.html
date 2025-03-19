@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A help desk application page for students">
+    <meta name="keywords" content="HTML, Form, tags, help desk">
+    <meta name="author" content="Victoria">
+
+    <title>CWA Help Desk Appointment</title>
+
+</head>
+
+<body>
+    <a href="https://www.swinburne.edu.au/"></a><img src="logo.png" alt="Swinburne logo">
+
+    <h1>CWA Help Desk Appointments</h1>
+
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>    
+    <p>Check Blackboard for when CWA tutors will be there</p>
+
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <!--This form gets posted to the link and then read when opened-->
+        <fieldset>
+        <!--Initial Student Details within a single field-->
+            <legend>Student Details</legend>
+            <p><label for="StudentID">Student ID</label>
+                <input type="number" id="StudentID" name="StudentID" required="required" placeholder="XXXXXXXXX">
+            </p>
+            <!--Naming paragraph-->
+            <p><label for="GivenName">Given Name</label>
+                <input type="text" id="GivenName" name="GivenName" required="required" value=""> 
+
+                <label for="FamilyName">Family Name</label>
+                <input type="text" id="FamilyName" name="FamilyName" required="required" value="">
+            </p>
+        </fieldset>
+        <fieldset>
+            <!--Collecting unit information-->
+            <legend>Your Unit</legend>
+            <p><label for="COS10011">COS10011</label>
+                <!--Using radio buttons to allow single selection-->
+                <input type="radio" id="COS10011" name="Unit" value="COS10011">
+
+                <label for="COS60004">COS60004</label>
+                <input type="radio" id="COS60004" name="Unit" value="COS60004">
+
+                <label for="COS60007">COS60007</label>
+                <input type="radio" id="COS60007" name="Unit" value="COS60007">
+            </p>
+            <p><label for="YourTutor">Your Tutor</label>
+                <select name="tutor" id="YourTutor" required="required">
+                    <option value="">Select Tutor</option>
+                    <option value="LisaMalone">Lisa Malone</option>
+                    <option value="StephenChristof">Stephen Christof</option>
+                    <option value="VashnaviAlter">Vashnavi Alter</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Issue</legend>
+            <!--Checkbox Options for Language-->
+            <p><label for="HTML">HTML</label>
+                <input type="checkbox" id="HTML" name="language[]" value="HTML" checked="checked">
+
+                <label for="CSS">CSS</label>
+                <input type="checkbox" id="CSS" name="languages[]" value="CSS">
+
+                <label for="JavaScript">JavaScript</label>
+                <input type="checkbox" id="JavaScript" name="languages[]" value="JavaScript">
+
+                <label for="PHP">PHP</label>
+                <input type="checkbox" id="PHP" name="languages[]" value="PHP">
+
+                <label for="MySQL">MySQL</label>
+                <input type="checkbox" id="MySQL" name="languages[]" value="MySQL">
+            </p>
+            <p><label for="Issue">Description of Issue</label>
+                <textarea id="Issue" name="issue" rows="10" cols="40" placeholder="Write a description of your problem here..."></textarea>
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferred Date/Time</legend>
+            <p><label for="Date">Date</label>
+            <input type="date" name="Date" id="Date" required="required">
+            </p>
+
+            <p><label for="Time">Time</label>
+            <input type="time" id="Time" name="time" required="required" value="00:00">
+        </p>
+        </fieldset>
+
+        <!--Submission or resetting form-->
+        <input type= "submit" value="Submit">
+        <input type= "reset" value="Reset Form">
+</form>
+</body>
+</html>
